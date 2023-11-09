@@ -39,10 +39,19 @@ public class Humain {
 	}
 	
 	public void gagnerArgent(int n ) {
-		
+		this.argent = this.argent + n ;
 	}
 	
+	public void setArgent(int argent) {
+		this.argent = argent;
+	}
+
 	public void perdreArgent(int n ) {
 		
+		if(this.argent == 0) {
+			System.out.println("Pas d'argent !!");
+		}else {
+			this.argent = this.argent - n ;
+		}
 	}
 }
