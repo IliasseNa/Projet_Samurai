@@ -31,11 +31,11 @@ public class Humain {
 	
 	public void direBonjour() {
 		
-		parler("Bonjour ! Je m'appelle " + this.getNom()  + "et j'aime boire du : " + this.getBoisson());
+		parler(" : Bonjour ! Je m'appelle " + this.getNom()  + " et j'aime boire du : " + this.getBoisson());
 	}
 	
 	public void boire() {
-		parler("Mmmm, un bon verre de " + this.getBoisson() + "GLOUPS !"); 
+		parler(" : Mmmm, un bon verre de " + this.getBoisson() + " GLOUPS !"); 
 	}
 	
 	public void gagnerArgent(int montant ) {

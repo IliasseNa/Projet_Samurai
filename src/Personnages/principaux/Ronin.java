@@ -6,10 +6,10 @@ public class Ronin extends Humain {
 
 	private int honneur  = 1; 
 		
-	public Ronin(String nom, int argent, String boisson, int honneur) {
-		super(nom, argent, boisson);
-		this.honneur = honneur ;
-	}
+    
+    public Ronin(String nom, int argent, String boisson) {
+        super(nom, argent, boisson);
+    }
 	
 	public void donner(Commerçant c , int montant) {
 		c.gagnerArgent(montant);
@@ -23,11 +23,11 @@ public class Ronin extends Humain {
 			y.perdreArgent(y.getArgent());
 			this.gagnerArgent(y.getArgent());
 			this.honneur += 1 ; 
-			parler("J'ai gagner mon duel");
+			parler(" : J'ai gagner mon duel");
 			
 		}else {
 			this.honneur -= honneur ;
-			parler("C'etait injuste ce combat, je devrais le gagner !!");
+			parler(" : C'etait injuste ce combat, je devrais le gagner !!");
 		}
 	}
 
