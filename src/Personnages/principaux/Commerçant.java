@@ -14,12 +14,13 @@ public class Commerçant extends Humain {
 		argent = argent - argent;
 		parler("Ce monde est vraiment trop injuste");
 		return argent ;
+		
 	}
 	
-	public void recevoir(int argent ) {
-		
-		this.setArgent(this.getArgent() + argent);
+	public void recevoir(int montant ) {
+		this.setArgent(this.getArgent() + montant);
 		parler("Merci monsieur !!");
+		
 	}
 
 }
