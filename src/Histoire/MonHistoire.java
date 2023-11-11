@@ -4,6 +4,9 @@ import Personnages.Humain;
 import Personnages.principaux.Commerçant;
 import Personnages.principaux.Ronin;
 import Personnages.principaux.Yakusa;
+import Personnages.secondaires.Colporteur;
+import Personnages.secondaires.GrandMere;
+import Personnages.secondaires.Traitre;
 
 public class MonHistoire {
 
@@ -23,6 +26,15 @@ public class MonHistoire {
 		  ronin.donner( commercant , 10);
 		  ronin.provoquer(yakusa);
 		  ronin.direBonjour();
+		  Traitre traitre = new Traitre("Juda", "Saki", "Monotori");
+		  
+		  GrandMere gr = new GrandMere("Seniora", 0 );
+		  gr.faireConnaissanceAvec(ronin);
+		  gr.faireConnaissanceAvec(commercant);
+		  gr.faireConnaissanceAvec(traitre);
+		  gr.ragoter();
+		  Colporteur col = new Colporteur("Jaimie", 40);
+		  yakusa.extorquer(col);
 
 	}
 
