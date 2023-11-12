@@ -6,6 +6,7 @@ import Personnages.principaux.Ronin;
 import Personnages.principaux.Yakusa;
 import Personnages.secondaires.Colporteur;
 import Personnages.secondaires.GrandMere;
+import Personnages.secondaires.Ninja;
 import Personnages.secondaires.Traitre;
 
 public class MonHistoire {
@@ -35,6 +36,9 @@ public class MonHistoire {
 		  gr.ragoter();
 		  Colporteur col = new Colporteur("Jaimie", 40);
 		  yakusa.extorquer(col);
+		  Ninja ninja = new Ninja("Colibri",0,"cyanure","Black Lotus");
+		  ninja.direBonjour();
+		  
 
 	}
 
