@@ -27,7 +27,7 @@ public class MonHistoire {
 		  ronin.provoquer(yakusa);
 		  ronin.direBonjour();
 		  Traitre traitre = new Traitre("Juda", "Saki", "Monotori");
-		  
+
 		  GrandMere gr = new GrandMere("Seniora", 0 );
 		  gr.faireConnaissanceAvec(ronin);
 		  gr.faireConnaissanceAvec(commercant);

@@ -19,7 +19,7 @@ public class GrandMere extends Humain{
 	
 	private String humainHasard() {
 		Random random = new Random();
-		int choix = random.nextInt(4) ;
+		int choix = random.nextInt(3) ;
 		
 		switch(choix) {
 		case 0 : 
@@ -28,8 +28,6 @@ public class GrandMere extends Humain{
 			return "Ronin";
 		case 2 : 
 			return "Samurai";
-		case 3 : 
-			return "Traitre";
 		 default:
             return  "Inconnu";
 		}
@@ -48,21 +46,15 @@ public class GrandMere extends Humain{
 	
 	public void ragoter() {
 		for(Humain h : memoire) {
-			if(h instanceof Commerçant) {
-				parler(" : Je crois que " + h.getNom() + " est un : Commerçant");
-				
-			}else if(h instanceof Ronin) {
-				parler(" : Je crois que " + h.getNom() + " est un : Ronin");
-				
-			}else if(h instanceof Samurai) {
-				parler(" : Je crois que " + h.getNom() + " est un : Samurai");
-			
-			}
-		}
-		
-		for(Humain h : memoire) {
 			if (h instanceof Traitre) {
 				parler(" : Je sais que " + h.getNom() + " est un : Traitre");
+			}
+			else 
+				if ((h instanceof Commerçant) 
+				 ||(h instanceof Ronin) 
+				 ||(h instanceof Samurai)) {
+					parler(" : Je crois que " + h.getNom() + 
+						   " est un : " + humainHasard());
 			}
 		}
 	}
