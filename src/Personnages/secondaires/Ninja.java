@@ -19,14 +19,27 @@ public class Ninja extends Yakusa {
 		
 		 Random random = new Random();
 	     int randomClan = random.nextInt(clansNinja.length);
-	     return clansNinja[randomClan];
+	     switch(randomClan) {
+	     case 0 : 
+	    	 return clansNinja[0];
+	     case 1 : 
+	    	 return clansNinja[1];
+	     case 2 : 
+	    	 return clansNinja[2];
+	     case 3 : 
+	    	 return clansNinja[3];
+	     case 4 : 
+	    	 return clansNinja[4];
+	    default : 
+	    	return "";
+	     }
+
 	}
 	
 	@Override
 	public void direBonjour() {
 		 super.direBonjour();
-		 parler(" : Je fais partie du " + this.getClan());
-		 parler(" : ( mon clan secret est "+this.getClan() +" et maintenant"
+		 parler(" : (mon clan secret est "+this.getClan()+" " + genererClan() +" et maintenant"
 		 		+ " que tu le sais, je vais devoir te tuer)");
 
 	}
